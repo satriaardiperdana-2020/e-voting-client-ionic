@@ -1,0 +1,7 @@
+{
+  "name": "hybrid-angular-blank-2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

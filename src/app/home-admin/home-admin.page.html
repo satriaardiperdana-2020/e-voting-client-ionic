@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>
+    Selamat Datang {{username}}
+  </ion-title>
+  <ion-buttons slot="primary">
+      <ion-button (click)="logout()" color="danger"><ion-icon slot="end" name="log-out"></ion-icon></ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div id="container">
+    <ion-card style="padding : 20px">
+      <ion-list lines="full">
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="calon()" color="primary" expand="block">Calon</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="pemilih()" color="primary" expand="block">Pemilih</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="laporan()" color="primary" expand="block">Laporan</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="logout()" color="danger" expand="block">Logout</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/laporan">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title style="display:inline-flex">Diagram</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        Diagram Batang
+      </ion-card-header>
+      <ion-card-content>
+        <div><canvas #barCanvas id="barCanvas"></canvas></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Diagram Donut
+      </ion-card-header>
+      <ion-card-content>
+        <div><canvas #doughnutCanvas ></canvas></div>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

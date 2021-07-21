@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card style="padding : 20px">
+      <ion-list lines="full">
+        <strong style="width: 100%;">Login Admin </strong>
+        <form [formGroup]="loginAdminForm" (ngSubmit)="onSubmit()">
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input formControlName="username" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password" type="password" required></ion-input>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="primary" expand="block">Login</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="kembali()" color="warning" expand="block">Kembali</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

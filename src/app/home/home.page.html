@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card style="padding : 20px">
+      <strong style="width: 100%;">Login Sebagai : </strong>
+      <ion-button  style="width: 100%;" routerLink="/login-admin">
+        <ion-label>Admin</ion-label>
+      </ion-button>
+      <ion-button  style="width: 100%;" routerLink="/login-pemilih">
+        <ion-label>Pemilih</ion-label>
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

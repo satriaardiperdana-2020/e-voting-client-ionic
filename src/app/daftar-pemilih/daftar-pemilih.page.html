@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Daftar Pemilih</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div id="container">
+    <ion-card style="padding : 20px">
+      <ion-list lines="full">
+        <strong style="width: 100%;">Daftar Pemilih </strong>
+        <form [formGroup]="daftarPemilihForm" (ngSubmit)="onSubmit()">
+          <ion-item>
+            <ion-label position="floating">NIK</ion-label>
+            <ion-input formControlName="nik" type="number" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nama</ion-label>
+            <ion-input formControlName="nama" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password" type="password" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Konfirmasi Password</ion-label>
+            <ion-input formControlName="konfirmasi_password" type="password" required></ion-input>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="primary" expand="block">Daftar</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="kembali()" color="warning" expand="block">Kembali</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

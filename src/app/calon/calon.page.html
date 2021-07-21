@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/home-admin">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title style="display:inline-flex">Calon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button routerLink="/calon-add">
+    <ion-icon name="add-outline"></ion-icon>
+    <ion-label>Add Calon</ion-label>
+  </ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let calon of Calons">
+      <ion-label>
+        <img src="{{endpoint}}uploads/foto/{{calon.foto}}" class="img-fluid" style="max-height:100px">
+        <h2>{{calon.nama}}</h2>
+        <h3>{{calon.nik}}</h3>
+        <h3>{{calon.jenis_kelamin}}</h3>
+        <h3>{{calon.tempat_lahir}}/{{calon.tanggal_lahir}}</h3>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/calon-update/', calon.id_calon]">
+          <ion-icon name="create" style="zoom:1.5"></ion-icon>
+        </button>
+        <button ion-button clear (click)="removeCalon(calon)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

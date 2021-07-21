@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/home-admin">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title style="display:inline-flex">Pemilih</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button routerLink="/pemilih-add">
+    <ion-icon name="add-outline"></ion-icon>
+    <ion-label>Add Pemilih</ion-label>
+  </ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let pemilih of Pemilihs">
+      <ion-label>
+        <h2>{{pemilih.nama}}</h2>
+        <h3>{{pemilih.nik}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

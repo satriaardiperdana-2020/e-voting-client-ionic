@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/voting">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title style="display:inline-flex">Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card style="padding : 20px">
+      <ion-list lines="full">
+        <strong style="width: 100%;">Profil </strong>
+        <form [formGroup]="profileCalonForm">
+        <ion-item>
+          <ion-label position="floating">NIK</ion-label>
+          <ion-input formControlName="nik" type="number" readonly></ion-input>
+        </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nama</ion-label>
+            <ion-input formControlName="nama" type="text" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Motto</ion-label>
+            <ion-input formControlName="motto" type="text" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Alamat</ion-label>
+            <ion-textarea formControlName="alamat" type="text" readonly></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Jenis Kelamin</ion-label>
+            <ion-select placeholder="Pilih" selectedText="{{jenis_kelamin}}" formControlName="jenis_kelamin" type="text" readonly>
+              <ion-select-option value="Laki-Laki" [select]="Laki-Laki == jenis_kelamin">Laki-Laki</ion-select-option>
+              <ion-select-option value="Perempuan" [select]="Perempuan == jenis_kelamin">Perempuan</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Tempat Lahir</ion-label>
+            <ion-input formControlName="tempat_lahir" type="text" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Tanggal Lahir</ion-label>
+            <ion-datetime id="tanggal_lahir" formControlName="tanggal_lahir" displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="myTime" readonly></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Foto</ion-label>
+            <br>
+            <img src="{{endpoint}}uploads/foto/{{foto}}" class="img-fluid" style="max-height:100px">
+          </ion-item>
+        </form>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

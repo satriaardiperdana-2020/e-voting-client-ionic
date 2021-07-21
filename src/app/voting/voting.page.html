@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/home-pemilih">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title style="display:inline-flex">Voting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let calon of Calons">
+      <ion-label>
+        <img src="{{endpoint}}uploads/foto/{{calon.foto}}" class="img-fluid" style="max-height:100px">
+        <h2>{{calon.nama}}</h2>
+        <h3>{{calon.nik}}</h3>
+        <h3>{{calon.jenis_kelamin}}</h3>
+        <h3>{{calon.tempat_lahir}}/{{calon.tanggal_lahir}}</h3>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <ion-button expand="block" color="warning" [routerLink]="['/profil/', calon.id_calon]">
+          Profil
+        </ion-button>
+        <ion-button expand="block" color="success" (click)="pilih(calon)">
+          Voting
+        </ion-button>
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

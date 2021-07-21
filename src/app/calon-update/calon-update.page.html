@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/calon">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title style="display:inline-flex">Calon Update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card style="padding : 20px">
+      <ion-list lines="full">
+        <strong style="width: 100%;">Calon Update </strong>
+        <form [formGroup]="updateCalonForm" (ngSubmit)="onSubmit()" method="post"  enctype="multipart/form-data">
+          <ion-item>
+            <ion-label position="floating">NIK</ion-label>
+            <ion-input formControlName="nik" type="number" required readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nama</ion-label>
+            <ion-input formControlName="nama" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Motto</ion-label>
+            <ion-input formControlName="motto" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Alamat</ion-label>
+            <ion-textarea formControlName="alamat" type="text" required></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Jenis Kelamin</ion-label>
+            <ion-select placeholder="Pilih" selectedText="{{jenis_kelamin}}" formControlName="jenis_kelamin" type="text" required>
+              <ion-select-option value="Laki-Laki" [select]="Laki-Laki == jenis_kelamin">Laki-Laki</ion-select-option>
+              <ion-select-option value="Perempuan" [select]="Perempuan == jenis_kelamin">Perempuan</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Tempat Lahir</ion-label>
+            <ion-input formControlName="tempat_lahir" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Tanggal Lahir</ion-label>
+            <ion-datetime id="tanggal_lahir" formControlName="tanggal_lahir" displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="myTime"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <img src="{{endpoint}}uploads/foto/{{foto}}" class="img-fluid" style="max-height:100px">
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Foto</ion-label>
+            <br>
+            <ion-button style="margin-top:20px" type="button" (click)="TakeImage()" full color="primary" [ngClass]="{'Hide': HideAddButton == true}">Masukkan Foto</ion-button>
+            <ion-card class="block" >
+              <img class="image-preview" src="{{image}}"/>
+            </ion-card>
+            <br>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="primary" expand="block">Update</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>
