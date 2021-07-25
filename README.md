@@ -11,6 +11,7 @@ Akan dapat response: { "status": true, "message": "Login Berhasil", "data": { "i
 untuk api yang lain urlnya bisa dilihat pada https://github.com/satriaardiperdana-2020/e-voting-client-ionic/blob/main/src/app/remote-service.service.ts
 
 Jika ingin dijalankan silakan checkout source server dan import script sql berikut: https://github.com/satriaardiperdana-2020/e-voting-server/blob/main/ci-voting.sql, kemudian masuk ke folder project client dan jalankan client dengan perintah:
+
 ionic cordova run android --liveload --consolelogs
 
 
