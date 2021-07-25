@@ -9,3 +9,6 @@ cara test postman login admin: pada postman pilih method post dan isi urlnya htt
 Akan dapat response: { "status": true, "message": "Login Berhasil", "data": { "id": "2", "username": "admin1", "level": "admin" } }
 
 untuk api yang lain urlnya bisa dilihat pada https://github.com/satriaardiperdana-2020/e-voting-client-ionic/blob/main/src/app/remote-service.service.ts
+
+apk source ini: https://drive.google.com/drive/folders/1mwwKY0wtzkmuENreu4tSwQbSCxBFmAg1?usp=sharing
+video demo versi mobile dan web: https://drive.google.com/drive/folders/1dNv1AVEKtWXR7MveVIKYYR2QuhCS2_xz?usp=sharing
